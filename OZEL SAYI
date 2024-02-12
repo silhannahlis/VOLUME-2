@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int n,u,first,second;
+    int i;
+    
+    printf(" 4 basamaklı sayı:");scanf("%d",&n);
+    first = n /100;
+    second = n %100;
+    u= (first+second)*(first+second);
+    //u= sqrt(first+second);
+    (n==u)? printf("ÖZEL SAYI") : printf("özel sayı DEĞİL");
+    //(n==(first+second)*(first+second))? printf("%d ÖZEL SAYI",n) : printf("özel sayı DEĞİL");
+    return 0;
+}
