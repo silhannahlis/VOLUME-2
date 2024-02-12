@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    float odenecekFatura, eskiBirimFiyat, yeniBirimFiyat;
+    float enflasyon, eskiAboneUcreti, yeniAboneUcreti;
+    float yeniOkuma, eskiOkuma, toplamHarcananElektrik;
+    
+    printf("enflasyon oranını girin: "); scanf("%f",&enflasyon);
+    printf("Önceki aya ait birim fiyat miktarını girin: "); scanf("%f",&eskiBirimFiyat);
+    printf("önceki aya ait abonelik ücreti: "); scanf("%f",&eskiAboneUcreti);
+    printf("Önceki aya ait okuma değerini girn: "); scanf("%f",&eskiOkuma);
+    printf("Bu aya ait okuma değerini girin: "); scanf("%f",&yeniOkuma);
+    
+    toplamHarcananElektrik = yeniOkuma - eskiOkuma;
+    yeniBirimFiyat = eskiBirimFiyat * ( 1 + enflasyon/100);
+    yeniAboneUcreti = eskiAboneUcreti * ( 1 + enflasyon/100);
+    odenecekFatura = toplamHarcananElektrik * yeniBirimFiyat + yeniAboneUcreti;
+    
+    printf("\nÖdenecek fatura tutar: %.2f ",odenecekFatura);
+    return 0;
+}
