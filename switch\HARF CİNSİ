@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    
+    char harf;
+    printf("harf gir: "); scanf("%c",&harf);
+    
+    switch(harf){
+        case 'a': case 'e':
+        case 'ı': case 'i':
+        case 'o': case 'ö':
+        case 'u': case 'ü': printf("sesli harf");
+        default: printf("sessiz harf");
+    }
+    
+    return 0;
+}
